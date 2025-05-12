@@ -17,6 +17,7 @@ class AuthorViewSet(viewsets.ModelViewSet):
 
 class BookViewSet(viewsets.ModelViewSet):
     serializer_class = BookSerializer
+    queryset = Book.objects.all()
     pagination_class = CustomPageNumberPagination
 
     def get_queryset(self):
